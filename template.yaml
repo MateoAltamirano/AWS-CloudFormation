@@ -4,5 +4,6 @@ Description: my template
 Resources:
     MyBucket:
         Type: AWS::S3::Bucket
+        DeletionPolicy: Retain
         Properties:
             BucketName: cloudfront-lab1-basic-project-set-up
