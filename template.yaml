@@ -1,9 +1,30 @@
+# AWSTemplateFormatVersion : '2010-09-09'
+
+# Description: my template
+
+# Parameters:
+#   BucketName:
+#     Type: String
+    
+# Resources:
+#     MyBucket:
+#         Type: AWS::S3::Bucket
+#         DeletionPolicy: Retain
+#         Properties:
+#             BucketName: cloudfront-lab1-basic-project-set-up
 AWSTemplateFormatVersion : '2010-09-09'
+
+Parameters:
+  BuketName: 
+    Type: String
 
 Description: my template
 Resources:
     MyBucket:
         Type: AWS::S3::Bucket
-        DeletionPolicy: Retain
         Properties:
-            BucketName: cloudfront-lab1-basic-project-set-up
+            BucketName: !Ref BuketName
+
+Outputs:
+  OuputValue1:
+    Value: !Ref MyBucket
