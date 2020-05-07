@@ -13,7 +13,7 @@ fi
 i=0 p=0 b=0 d=0
 
 CF_FILE="/tmp/cf_file.txt"
-DEPLOYMENTS_BUCKET="maudeployments"
+DEPLOYMENTS_BUCKET="mateodeployments"
 
 case "$1" in
   -i|--install)
