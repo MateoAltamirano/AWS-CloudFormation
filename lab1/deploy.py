@@ -16,8 +16,8 @@ except getopt.error as err:
 
 import boto3
 
-PROJECT = "upb-cloudformation2"
-BUCKET_NAME = f"{PROJECT}-bucket-123"
+PROJECT = "aws-cloudformation-lab1"
+BUCKET_NAME = f"{PROJECT}-update"
 
 cf = boto3.client('cloudformation')
 
@@ -31,7 +31,7 @@ if command in ("--create", "-c"):
         TemplateBody= template,
         Parameters=[
             {
-                'ParameterKey': 'BuketName',
+                'ParameterKey': 'BucketName',
                 'ParameterValue': BUCKET_NAME
             },
         ]
